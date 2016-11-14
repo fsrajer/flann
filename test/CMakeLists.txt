@@ -1,12 +1,12 @@
 
 add_custom_target(tests)
 add_custom_target(flann_gtests)
-add_custom_target(test)
+add_custom_target(test_)
 add_custom_target(flann_gtest)
 
 add_dependencies(tests flann_gtests)
-add_dependencies(test flann_gtest)
-add_dependencies(test tests)
+add_dependencies(test_ flann_gtest)
+add_dependencies(test_ tests)
 
 set(EXECUTABLE_OUTPUT_PATH ${TEST_OUTPUT_PATH})
 
@@ -79,5 +79,5 @@ if (BUILD_C_BINDINGS)
     add_custom_target(flann_ruby_spec
                     COMMAND bundle exec rake spec
                     WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/src/ruby)
-    add_dependencies(test flann_ruby_spec)
+    add_dependencies(test_ flann_ruby_spec)
 endif()

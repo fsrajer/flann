@@ -78,7 +78,7 @@ macro(flann_add_cuda_gtest exe)
                     VERBATIM
                     COMMENT "Runnint gtest test(s) ${exe}")
     # add dependency to 'test' target
-    add_dependencies(test test_${_testname})
+    add_dependencies(test_ test_${_testname})
 endmacro(flann_add_cuda_gtest)
 
 macro(flann_add_pyunit file)
