@@ -12,6 +12,8 @@ set(FLANN_VERSION 1.9.1)
 DISSECT_VERSION()
 GET_OS_INFO()
 
+set(CMAKE_DEBUG_POSTFIX "_d")
+
 
 # detect if using the Clang compiler
 if("${CMAKE_C_COMPILER_ID}" MATCHES "Clang")
